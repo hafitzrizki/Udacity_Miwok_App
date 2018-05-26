@@ -58,6 +58,13 @@ public class PhrasesActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        //menutup mediaplayer saat aplikasi ditutup
+        releasedMediaPlayer();
+    }
+
     private void releasedMediaPlayer(){
         if (mMediaPlayer != null){
             mMediaPlayer.release();

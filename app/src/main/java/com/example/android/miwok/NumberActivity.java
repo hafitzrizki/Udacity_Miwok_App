@@ -62,6 +62,13 @@ public class NumberActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        //menutup mediaplayer saat aplikasi ditutup
+        releasedMediaPlayer();
+    }
+
     //clean media player
     private void releasedMediaPlayer(){
         if (mMediaPlayer != null){
